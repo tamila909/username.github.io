@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Поиск свойств эфирных масел</title>
+</head>
+<body>
+  <style>
+    body {background-image: url('background.jpg');
+      /* Добавляем свойства для отображения фона */
+      background-size: cover; 
+      background-position: initial; /* Выравниваем изображение по центру */
+      background-repeat: no-repeat;  Отключает повторение фона 
+      background-attachment: scroll;  Фон остается на месте при прокрутке страницы */  }
+  </style>
+  
+<div style="width: 300px; height: 220px;"></div>
+
+
+<h2 style="text-align: center;">Поиск свойств эфирных масел</h2>
+
+<!-- Поисковая строка -->
+<form style="text-align: center;" >
+  <label for="searchInput">Введите название эфирного масла:</label><br>
+  <input type="text" id="searchInput" name="searchInput" placeholder="Начните вводить название масла...">
+</form>
+
+<!-- Вывод результатов поиска -->
+<div id="searchResults"></div>
+
+<!-- JavaScript для обработки поиска -->
+<script>
+  // Функция обработки ввода в поисковой строке
+  document.getElementById('searchInput').addEventListener('input', function() {
+    var inputValue = this.value.toLowerCase(); // Получаем введенное значение и приводим его к нижнему регистру
+    var searchResultsDiv = document.getElementById('searchResults');
+    var properties = ''; // Переменная для хранения свойств масла
+
+    // Проверяем введенное значение и определяем соответствующие свойства масла
+    if (inputValue.includes('чабрец') || inputValue.includes('гвоздика') || inputValue.includes('душица') || inputValue.includes('анис') || inputValue.includes('базилик') || inputValue.includes('бергамот') || inputValue.includes('лимон') || inputValue.includes('грейпфрут') || inputValue.includes('можжевельник') || inputValue.includes('лемонграсс')) {
+      properties = 'Антибактериальное свойство';
+    } else if (inputValue.includes('ромашка') || inputValue.includes('тысячелистник') || inputValue.includes('иланг-иланг') || inputValue.includes('лаванда') || inputValue.includes('чайное дерево') || inputValue.includes('можжевельник') || inputValue.includes('чайное дерево')) {
+      properties = 'Противовоспалительное свойство';
+    } else if (inputValue.includes('майоран') || inputValue.includes('чайное дерево') || inputValue.includes('нард') || inputValue.includes('анис') || inputValue.includes('апельсин') || inputValue.includes('бергамот') || inputValue.includes('гвоздика') || inputValue.includes('лаванда') || inputValue.includes('можжевельник') || inputValue.includes('мята') || inputValue.includes('петитгрейн') || inputValue.includes('пачули') || inputValue.includes('эвкалипт')) {
+      properties = 'Обезболивающее свойство';
+    } else if (inputValue.includes('эвкалипт') || inputValue.includes('анис') || inputValue.includes('скипидар')) {
+      properties = 'Отхаркивающее свойство';
+    } else if (inputValue.includes('георгин') || inputValue.includes('тысячелистник') || inputValue.includes('можжевельник сибирский') || inputValue.includes('пихта')) {
+      properties = 'Антиоксидантное свойство';
+    }
+
+      else if (inputValue.includes('лаванда') || inputValue.includes('розмарин') || inputValue.includes('ваниль') || inputValue.includes('герань') || inputValue.includes('мята')) {
+      properties = 'Инсектицидное свойство';
+    }
+      else if (inputValue.includes('корица') || inputValue.includes('перечная мята') || inputValue.includes('чайное дерево') || inputValue.includes('пальмовая роза') || inputValue.includes('шалфей')) {
+      properties = 'Фунгицидное свойство';
+    }
+    // Выводим свойства масла
+        searchResultsDiv.innerHTML = '<strong>Свойство:</strong> ' + properties;
+  });
+</script>
+
+<div style="width: 300px; height: 100px;"></div>
+<h5 class="section-title" class="credits" style="text-align: center;"> Этот сайт создавался в рамках научного проекта по изучению свойств эфирных масел.  </h5>
+<h5 class="section-title" class="credits" style="text-align: center;"> Авторы: ученица 9к класса Ұзақбай Айсұлу, учитель биологии Туребаева Т. Т.  </h5>
+<div style="width: 300px; height: 30px;"></div>
+
+<section id="mail" class="mail" style="text-align: center;">
+    <div class="container">
+      <h3 class="section-title"  style="width: 222px; height: 70px; border: 1px solid #000; padding: 10px; position: relative; left: 250px; top: 25px;"> Если остались вопросы, оставьте свой e-mail, мы с вами свяжемся </h3>
+      <div style="width: 300px; height: 15px;"></div>
+      <form action="#" class="form">
+        <input type="email" placeholder="Введите свой E-mail" name="email" class="input" required>
+        <div style="width: 300px; height: 5px;"></div>
+        <button type="submit" class="btn btn-form"> Узнать больше </button>
+      </form>
+      
+    </div>
+  </section>
+  <footer id="footer" class="footer">
+    <div style="width: 300px; height: 20px;"></div>
+    <div class="container">
+      <p class="credits" style="text-align: center;"> Все права защищены
+      </p>
+    </div>    
+  </footer>
+
+</body>
+</html>
